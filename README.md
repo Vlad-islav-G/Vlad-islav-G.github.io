@@ -1,1 +1,0 @@
-# Vlad-islav-G.github.io
