@@ -2,11 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=5.0">
-    <title>My First GitHub Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enhanced GitHub Page</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Header Section */
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styling */
+        button {
+            background: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>This is my first website hosted on GitHub Pages!</p>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My GitHub Page</h1>
+        <p>Building a better web, one project at a time.</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 id="about">About Me</h2>
+        <p>Hello! I'm a web development student learning how to create awesome websites.</p>
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+
+        <h2 id="projects">My Projects</h2>
+        <p>Here are some projects I have worked on:</p>
+        <ul>
+            <li>Project 1: <a href="#">Portfolio Website</a></li>
+            <li>Project 2: <a href="#">Simple Calculator App</a></li>
+            <li>Project 3: <a href="#">To-Do List</a></li>
+        </ul>
+
+        <!-- Interactive Button -->
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message" style="display:none; color: green;">You clicked the button!</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My GitHub Page | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
