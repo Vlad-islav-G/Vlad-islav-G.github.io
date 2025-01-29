@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
-    <style>
+    
+    <meta charset="UTF-8"> <!-- All special characters are displayed correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adjusts properly on mobile devices -->
+    
+    <title>Vladislav's GitHub Page</title> <!-- Browser tab title -->
+    
+    <style> <!-- CSS styles start here -->
         body {
-            background-color: lightgray; /* Change this to any color you like */
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: lightgray; /* Page background color */
+            font-family: Arial, sans-serif; /* Font style */
+            text-align: center; /* Centers all text and content */
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
         h1 {
-            color: blue; /* Change this color */
+            color: black; /* Heading text color */
         }
 
         p {
-            color: black; /* Change this color */
+            color: black; /* Paragraph text color */
         }
 
         button {
-            background-color: green; /* Change this color */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+            background-color: red; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Adds space inside the button */
+            border: none; /* Removes button border */
+            cursor: pointer; /* Makes the cursor a pointer when hovering */
             font-size: 16px;
-            margin-top: 20px;
+            margin-top: 20px; /* Adds space above the button */
         }
 
         button:hover {
-            background-color: darkgreen; /* Change this color */
+            background-color: darkred; /* Button color when hovered */
         }
-    </style>
+
+        #angryCat {
+            display: none; /* Hides the image initially */
+            margin-top: 20px;
+            width: 300px; /* Adjust image size */
+        }
+    </style> <!-- CSS styles end here -->
+    
+    <script>
+        function showImage() {
+            document.getElementById("angryCat").style.display = "block"; /* Reveals the image */
+        }
+    </script> <!-- JavaScript function to reveal image -->
+    
 </head>
+    
 <body>
 
-    <h1>Welcome to My Simple Page</h1>
-    <p>This is a basic HTML and CSS page. You can customize it!</p>
+    <h1>Welcome to My GitHub Page!</h1>
+    
+    <p>This is my first webpage!<br>
+       I am taking an IT 3203 Web Dev class at KSU!<br>
+       I am learning HTML and CSS!</p>
 
-    <button onclick="alert('You clicked the button!')">Click Me</button>
+    <!-- Button that will reveal the image -->
+    <button onclick="showImage()">Do NOT Click Me!</button>
+
+    <!-- Angry Cat Image (Hidden Initially) -->
+    <img id="angryCat" src="https://i.imgur.com/VsPxw6U.jpeg" alt="Angry Cat">
 
 </body>
 </html>
