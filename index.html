@@ -7,13 +7,20 @@
     
     <title>Vladislav's GitHub Page</title> <!-- Browser tab title -->
     
-    <style> <!-- CSS styles start here -->
+    <style> 
         body {
             background-color: lightgray; /* Page background color */
             font-family: Arial, sans-serif; /* Font style */
-            text-align: center; /* Centers all text and content */
+            text-align: center; /* Centers inline text */
             margin: 0;
-            padding: 30px;
+            padding: 0;
+
+            /* Centering everything */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh; /* Takes full viewport height */
         }
 
         h1 {
@@ -27,11 +34,11 @@
         button {
             background-color: red; /* Button background color */
             color: white; /* Button text color */
-            padding: 10px 20px; /* Adds space inside the button */
-            border: none; /* Removes button border */
-            cursor: pointer; /* Makes the cursor a pointer when hovering */
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
             font-size: 16px;
-            margin-top: 20px; /* Adds space above the button */
+            margin-top: 20px; 
         }
 
         button:hover {
@@ -43,13 +50,13 @@
             margin-top: 20px;
             width: 300px; /* Adjust image size */
         }
-    </style> <!-- CSS styles end here -->
+    </style> 
     
     <script>
         function showImage() {
             document.getElementById("angryCat").style.display = "block"; /* Reveals the image */
         }
-    </script> <!-- JavaScript function to reveal image -->
+    </script> 
     
 </head>
     
@@ -61,10 +68,8 @@
        I am taking an IT 3203 Web Dev class at KSU!<br>
        I am learning HTML and CSS!</p>
 
-    <!-- Button that will reveal the image -->
     <button onclick="showImage()">Do NOT Click Me!</button>
 
-    <!-- Angry Cat Image (Hidden Initially) -->
     <img id="angryCat" src="https://i.imgur.com/VsPxw6U.jpeg" alt="Angry Cat">
 
 </body>
