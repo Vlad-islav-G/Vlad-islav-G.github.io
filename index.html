@@ -5,7 +5,7 @@
     <meta charset="UTF-8"> <!-- All special characters are displayed correctly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adjusts properly on mobile devices -->
     <meta name="author" content="Vladislav Gants">
-    <meta name="description" content="this page contains all the things I am learning">
+    <meta name="description" content="This page contains all the things I am learning">
     
     <title>Vladislav's GitHub Page</title> <!-- Browser tab title -->
     
@@ -54,7 +54,6 @@
         }
     </style> 
 
-    
     <script>
         function showImage() {
             document.getElementById("angryCat").style.display = "block"; /* Reveals the image */
@@ -65,29 +64,30 @@
 <body>
 
     <h1>Hello World!</h1>
-        <h2>My name is <em>Vladislav Gants</em></h2>
+    <h2>My name is <em>Vladislav Gants</em></h2>
 
-        <hr>
-        <h2>I am a student at KSU!</h2>
-        <p>This is my first web page. </p>
-        <p>HTML is pretty cool.</p>
-        <hr>
+    <hr>
+    <h2>I am a student at KSU!</h2>
+    <p>This is my first web page.</p>
+    <p>HTML is pretty cool.</p>
+    <hr>
     
-        <h2>My daily word/school schedule</h2>
-        <p> <strong>Monday:</strong>
-            <br>
-            <br> <strong>Tuesday:</strong>
-            <br>
-            <br> <strong>Wednesday:</strong>
-            <br>
-            <br> <strong>Thursday:</strong> 
-            <br>
-            <br> <strong>Friday:</strong>
-        </p>
-        <hr>
+    <h2>My daily word/school schedule</h2>
+    <p> 
+        <strong>Monday:</strong><br>
+        <strong>Tuesday:</strong><br>
+        <strong>Wednesday:</strong><br>
+        <strong>Thursday:</strong><br>
+        <strong>Friday:</strong>
+    </p>
+    <hr>
 
-    <button onclick="showImage()">Do NOT Click Me!</button>
+    <!-- Button with an abbreviation tooltip inside -->
+    <button onclick="showImage()">
         <abbr title="Really don't click this button!">Do NOT Click Me!</abbr>
+    </button>
+
+    <!-- Hidden image -->
     <img id="angryCat" src="https://i.imgur.com/VsPxw6U.jpeg" alt="Angry Cat">
 
 </body>
