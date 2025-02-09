@@ -52,6 +52,11 @@
             margin-top: 20px;
             width: 300px; /* Adjust image size */
         }
+
+        abbr {
+            text-decoration: none; /* Remove the default underline */
+            cursor: pointer;
+        }
     </style> 
 
     <script>
@@ -82,7 +87,7 @@
     </p>
     <hr>
 
-    <!-- Button with an abbreviation tooltip inside -->
+    <!-- Button with abbr tooltip inside -->
     <button onclick="showImage()">
         <abbr title="Really don't click this button!">Do NOT Click Me!</abbr>
     </button>
