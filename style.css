@@ -1,1 +1,56 @@
+/* General Page Styling */
+body {
+    background-color: lightgray; /* Page background color */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Centers inline text */
+    margin: 0;
+    padding: 0;
 
+    /* Centering everything */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; /* Takes full viewport height */
+}
+
+/* Headings */
+h1, h2 {
+    color: black; /* Heading text color */
+}
+
+/* Paragraphs */
+p {
+    color: black; /* Paragraph text color */
+}
+
+/* Buttons */
+button {
+    background-color: red; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px;
+    margin-top: 20px; 
+}
+
+button:hover {
+    background-color: darkred; /* Button color when hovered */
+}
+
+/* Image */
+#angryCat {
+    display: none; /* Hides the image initially */
+    margin-top: 20px;
+    width: 300px; /* Adjust image size */
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 2px;
+    background-color: black; /* Makes the horizontal line visible */
+    width: 80%;
+    margin: 20px 0;
+}
