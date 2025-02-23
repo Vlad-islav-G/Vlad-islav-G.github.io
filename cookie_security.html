@@ -19,7 +19,7 @@
     <!-- Header Section -->
     <div id="divheader">
         <h1>Cookie Security</h1>
-        <img src="https://www.janespatisserie.com/wp-content/uploads/2020/04/IMG_0744_1-1024x1536.jpg" alt="Internet Cookie" class="cookie-img">
+        <img src="https://images.unsplash.com/photo-1624304190724-fd7738a40c9d" alt="Internet Cookie" class="cookie-img">
         <p>Learn how to secure cookies and protect user data.</p>
         <hr>
     </div>
@@ -27,8 +27,13 @@
     <!-- Left Sidebar: Table of Contents -->
     <div id="divleft">
         <h2>Table of Contents</h2>
+        <h3>Main:</h3>
         <ul>
             <li><a href="index.html">Home</a></li>
+        </ul>
+
+        <h3>Project Milestone 1:</h3>
+        <ul>
             <li><a href="cookie_basics.html">Cookie Basics</a></li>
             <li><a href="cookie_security.html">Cookie Security</a></li>
             <li><a href="references.html">References</a></li>
@@ -38,7 +43,62 @@
     <!-- Main Content Section -->
     <div id="divright">
         <h2>Why Is Cookie Security Important?</h2>
-        <p>Cookies can store sensitive data like authentication tokens. Without proper security, attackers can steal or manipulate cookies, leading to security risks.</p>
+        <p>Cookies store data such as **session IDs, authentication tokens, and tracking information**. If not secured properly, they can be exploited by attackers, leading to **data theft, session hijacking, and unauthorized access**.</p>
+
+        <h2>Common Cookie Security Risks</h2>
+        <ul>
+            <li><strong>Cross-Site Scripting (XSS):</strong> Attackers inject malicious scripts to steal cookies and hijack user sessions.</li>
+            <li><strong>Cross-Site Request Forgery (CSRF):</strong> Attackers trick users into making unwanted requests while authenticated.</li>
+            <li><strong>Session Hijacking:</strong> If a session cookie is exposed, an attacker can take over a user’s session.</li>
+            <li><strong>Cookie Theft via Unsecured HTTP:</strong> If cookies are sent over **HTTP** instead of **HTTPS**, they can be intercepted by attackers.</li>
+        </ul>
+
+        <h2>How to Secure Cookies</h2>
+        <table>
+            <tr>
+                <th>Security Measure</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>Secure</code> Attribute</td>
+                <td>Ensures cookies are only sent over **HTTPS** connections.</td>
+            </tr>
+            <tr>
+                <td><code>HttpOnly</code> Attribute</td>
+                <td>Prevents JavaScript from accessing cookies, reducing **XSS risks**.</td>
+            </tr>
+            <tr>
+                <td><code>SameSite</code> Attribute</td>
+                <td>Prevents cookies from being sent in **cross-site requests**, reducing **CSRF risks**.</td>
+            </tr>
+            <tr>
+                <td>Expiration Times</td>
+                <td>Cookies should have short expiration times to reduce the risk of **stolen sessions**.</td>
+            </tr>
+            <tr>
+                <td>Use Strong Encryption</td>
+                <td>Encrypt sensitive data stored in cookies to prevent unauthorized access.</td>
+            </tr>
+        </table>
+
+        <h2>Best Practices for Cookie Security</h2>
+        <ol>
+            <li>Use **HTTPS** to prevent man-in-the-middle attacks.</li>
+            <li>Enable **`HttpOnly`** to block JavaScript access.</li>
+            <li>Set **expiration times** for session cookies.</li>
+            <li>Use **secure flags** to restrict cookies to encrypted connections.</li>
+            <li>Monitor cookie usage and clean up unnecessary cookies.</li>
+        </ol>
+
+        <h2>How to Check Cookie Security in Your Browser</h2>
+        <p>To check cookie settings in Google Chrome:</p>
+        <ol>
+            <li>Right-click on a webpage and select **Inspect**.</li>
+            <li>Go to the **Application** tab.</li>
+            <li>Click on **Storage > Cookies**.</li>
+            <li>Select a website and check **security attributes** like `Secure`, `HttpOnly`, and `SameSite`.</li>
+        </ol>
+        
         <hr>
     </div>
 
