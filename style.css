@@ -109,3 +109,11 @@ hr {
     margin: 20px auto; /* Centers the line */
     display: block;
 }
+
+/* Style for Cookie Images */
+.cookie-img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 10px;
+}
