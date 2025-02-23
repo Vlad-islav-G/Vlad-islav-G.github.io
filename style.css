@@ -95,7 +95,7 @@ button:hover {
 /* Hide the Cat Image by Default */
 #angryCat {
     display: none;
-    margin-top: 20px;
+    margin: 20px auto;
     width: 300px;
     border-radius: 10px;
 }
