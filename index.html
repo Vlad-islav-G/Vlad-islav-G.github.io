@@ -20,33 +20,56 @@
 
 <body>
 
-    <h1>Hello World!</h1>
-    <h2>My name is <em>Vladislav Gants</em></h2>
+<div class="grid-container">
 
-    <hr>
-    
-    <h2>I am a student at KSU!</h2>
-    <p>This is my first web page.</p>
-    <p>HTML is pretty cool.</p>
+    <!-- Header Section -->
+    <div id="divheader">
+        <h1>Hello World!</h1>
+        <h2>My name is <em>Vladislav Gants</em></h2>
+        <p>This is my first web page.</p>
+        <hr>
+    </div>
 
-    <hr>
+    <!-- Sidebar Navigation (Table of Contents) -->
+    <div id="divleft">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cookie_basics.html">Cookie Basics</a></li>
+            <li><a href="cookie_security.html">Cookie Security</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </div>
 
-    <h2>My daily work/school schedule</h2>
-    <p>
-        <strong>Monday:</strong> Study HTML<br>
-        <strong>Tuesday:</strong> Practice CSS<br>
-        <strong>Wednesday:</strong> Work on assignments<br>
-        <strong>Thursday:</strong> Watch tutorials<br>
-        <strong>Friday:</strong> Review the week's learning
-    </p>
+    <!-- Main Content Section -->
+    <div id="divright">
+        <h2>I am a student at KSU!</h2>
+        <p>HTML is pretty cool.</p>
+        
+        <h2>My daily work/school schedule</h2>
+        <p>
+            <strong>Monday:</strong> Study HTML<br>
+            <strong>Tuesday:</strong> Practice CSS<br>
+            <strong>Wednesday:</strong> Work on assignments<br>
+            <strong>Thursday:</strong> Watch tutorials<br>
+            <strong>Friday:</strong> Review the week's learning
+        </p>
 
-    <hr>
+        <hr>
 
-    <button onclick="showImage()">
-        <abbr title="Really don't click this button!">Do NOT Click Me!</abbr>
-    </button>
+        <button onclick="showImage()">
+            <abbr title="Really don't click this button!">Do NOT Click Me!</abbr>
+        </button>
 
-    <img id="angryCat" src="https://i.imgur.com/VsPxw6U.jpeg" alt="Angry Cat">
+        <img id="angryCat" src="https://i.imgur.com/VsPxw6U.jpeg" alt="Angry Cat">
+    </div>  
+
+    <!-- Footer Section -->
+    <div id="divfooter">
+        <p>Footer text - Vladislav Gants' Learning Page</p>
+    </div>
+
+</div>
 
 </body>
 </html>
