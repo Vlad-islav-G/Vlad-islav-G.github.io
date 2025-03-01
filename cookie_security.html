@@ -6,9 +6,9 @@
     <meta name="author" content="Vladislav Gants">
     <meta name="description" content="Learn about cookie security in web development">
 
-    <title>🍪Cookie Security🍪</title>
+    <title>🍪 cookie security 🍪</title>
 
-    <!-- Link to external CSS file -->
+    <!-- link to external css file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,75 +16,91 @@
 
 <div class="grid-container">
 
-    <!-- Header Section -->
+    <!-- header section (title & image) -->
     <div id="divheader">
-        <h1>Cookie Security</h1>
-        <img src="https://i.imgur.com/oFVfYem.jpeg" alt="Chocolate Chip Cookie" class="cookie-img">
-        <p>Learn how to secure cookies and protect user data.</p>
-        <hr>
+        <h1>cookie security</h1>
+        <img src="https://i.imgur.com/oFVfYem.jpeg" alt="chocolate chip cookie" class="cookie-img">
+        <p>learn how to secure cookies and protect user data.</p>
+        <hr> <!-- horizontal line for separation -->
     </div>
 
-    <!-- Left Sidebar: Table of Contents -->
+    <!-- left sidebar (table of contents) -->
     <div id="divleft">
-        <h2>Table of Contents</h2>
-        <h3>Main:</h3>
+        <h2>table of contents</h2>
+
+        <h3>main:</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">home</a></li>
         </ul>
 
-        <h3>Project Milestone 1:</h3>
+        <h3>project milestone 1:</h3>
         <ul>
-            <li><a href="cookie_basics.html">Cookie Basics</a></li>
-            <li><a href="cookie_security.html">Cookie Security</a></li>
-            <li><a href="references.html">References</a></li>
+            
+            <li><a href="cookie_basics.html">cookie basics</a></li>
+            <li><a href="cookie_security.html">cookie security</a></li>
+            <li><a href="references.html">references</a></li>
+    
         </ul>
     </div>
 
-    <!-- Main Content Section -->
+    <!-- main content section (security threats & protection) -->
     <div id="divright">
-        <h2>Are Cookies Safe?</h2>
-        <p>Cookies themselves **are not dangerous**, but they can be **misused** by hackers if websites don’t secure them properly. This can lead to stolen passwords, tracking without consent, or unauthorized access to accounts.</p>
 
+        <!-- are cookies safe? section -->
+        <h2>are cookies safe?</h2>
+        <p>cookies themselves <strong>are not dangerous</strong>, but they can be <strong>misused</strong> by hackers if websites don’t secure them properly. this can lead to stolen passwords, tracking without consent, or unauthorized access to accounts.</p>
         <hr>
-        
-        <h2>How Hackers Can Steal Cookies</h2>
-        <p>Hackers use different tricks to steal cookies. Here are some common ways:</p>
+
+        <!-- how hackers can steal cookies -->
+        <h2>how hackers can steal cookies</h2>
+        <p>hackers use different tricks to steal cookies. here are some common ways:</p>
+       
         <ul>
-            <li><strong>Cross-Site Scripting (XSS):</strong> Attackers inject harmful code into a website to steal cookies.</li>
-            <li><strong>Session Hijacking:</strong> If a hacker gets your session cookie, they can pretend to be you.</li>
-            <li><strong>Unencrypted Cookies:</strong> If cookies are sent over **HTTP** instead of **HTTPS**, they can be intercepted.</li>
-            <li><strong>Cross-Site Request Forgery (CSRF):</strong> Attackers trick you into making unwanted actions on websites.</li>
+            
+            <li><strong>cross-site scripting (xss):</strong> attackers inject harmful code into a website to steal cookies.</li>
+            <li><strong>session hijacking:</strong> if a hacker gets your session cookie, they can pretend to be you.</li>
+            <li><strong>unencrypted cookies:</strong> if cookies are sent over <strong>http</strong> instead of <strong>https</strong>, they can be intercepted.</li>
+            <li><strong>cross-site request forgery (csrf):</strong> attackers trick you into making unwanted actions on websites.</li>
+       
+        </ul>
+        
+        <hr>
+
+        <!-- how websites keep cookies safe -->
+        <h2>how websites keep cookies safe</h2>
+        <p>to protect cookies, websites use security features like:</p>
+        <ul>
+            
+            <li><strong>secure cookies:</strong> cookies are only sent over <strong>https</strong> to prevent theft.</li>
+            <li><strong>httponly cookies:</strong> these cannot be accessed by javascript, stopping xss attacks.</li>
+            <li><strong>samesite attribute:</strong> stops cookies from being sent in <strong>cross-site</strong> requests, reducing csrf attacks.</li>
+            <li><strong>short expiration times:</strong> websites delete session cookies after a short time to reduce risks.</li>
+      
+        </ul>
+        
+    
+        <hr>
+
+        <!-- how you can protect yourself -->
+        <h2>how you can protect yourself</h2>
+        <p>even if websites secure cookies, <strong>you</strong> can take extra steps to protect your data:</p>
+        <ul>
+            
+            <li>use <strong>https</strong> websites whenever possible.</li>
+            <li>clear cookies regularly in your browser settings.</li>
+            <li>use <strong>private browsing mode</strong> if you don’t want cookies saved.</li>
+            <li>block <strong>third-party cookies</strong> to reduce tracking.</li>
+            <li>enable <strong>two-factor authentication (2fa)</strong> for extra security.</li>
+            
         </ul>
 
-        <hr>
+        <p>cookies help websites remember you, but it’s important to understand how they work and how to keep your data safe.</p>
         
-        <h2>How Websites Keep Cookies Safe</h2>
-        <p>To protect cookies, websites use security features like:</p>
-        <ul>
-            <li><strong>Secure Cookies:</strong> Cookies are only sent over **HTTPS** to prevent theft.</li>
-            <li><strong>HttpOnly Cookies:</strong> These cannot be accessed by JavaScript, stopping XSS attacks.</li>
-            <li><strong>SameSite Attribute:</strong> Stops cookies from being sent in **cross-site** requests, reducing CSRF attacks.</li>
-            <li><strong>Short Expiration Times:</strong> Websites delete session cookies after a short time to reduce risks.</li>
-        </ul>
-
-        <hr>
+        <hr> <!-- horizontal line for separation -->
         
-        <h2>How You Can Protect Yourself</h2>
-        <p>Even if websites secure cookies, **you** can take extra steps to protect your data:</p>
-        <ul>
-            <li>Use **HTTPS** websites whenever possible.</li>
-            <li>Clear cookies regularly in your browser settings.</li>
-            <li>Use **private browsing mode** if you don’t want cookies saved.</li>
-            <li>Block **third-party cookies** to reduce tracking.</li>
-            <li>Enable **two-factor authentication (2FA)** for extra security.</li>
-        </ul>
+    </div> <!-- end of main content section -->
 
-        <p>Cookies help websites remember you, but it’s important to understand how they work and how to keep your data safe.</p>
-        
-        <hr>
-    </div>
-
-</div>
+</div> <!-- end of grid container - I made like 3 batches of cookies since I started this assignment lol-->
 
 </body>
 </html>
