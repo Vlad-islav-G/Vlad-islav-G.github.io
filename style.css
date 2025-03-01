@@ -1,119 +1,143 @@
-/* General Page Styling */
+/* ======================= */
+/* 🔹 General Page Styling 🔹 */
+/* ======================= */
 body {
-    background-color: #111; /* Full black background */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #ddd; /* Light grey text for contrast */
+    background-color: #111; /* Sets the entire background to black */
+    font-family: Arial, sans-serif; /* Uses a clean, easy-to-read font */
+    margin: 0; /* Removes default margin around the page */
+    padding: 0; /* Removes default padding */
+    color: #ddd; /* Sets text color to light gray for contrast */
 }
 
-/* Grid Layout */
+/* ========================== */
+/* 🔹 Grid Layout (Page Sections) 🔹 */
+/* ========================== */
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Sidebar (1 part), Content (3 parts) */
-    grid-template-rows: auto auto;
-    grid-gap: 10px;
-    padding: 20px;
+    display: grid; /* Enables CSS Grid for layout */
+    grid-template-columns: 1fr 3fr; /* Divides page into 2 sections: Sidebar (1 part), Main Content (3 parts) */
+    grid-template-rows: auto auto; /* Automatic row sizing based on content */
+    grid-gap: 10px; /* Adds spacing between grid sections */
+    padding: 20px; /* Adds padding around the grid container */
 }
 
-/* Top Section (Header) */
+/* =============================== */
+/* 🔹 Top Section (Header Area) 🔹 */
+/* =============================== */
 #divheader {
-    grid-column: 1 / span 2;
-    text-align: center;
-    background-color: #222; /* Dark grey-black */
-    padding: 20px;
-    border-radius: 5px;
-    color: #eee; /* Light text */
+    grid-column: 1 / span 2; /* Makes the header stretch across both columns */
+    text-align: center; /* Centers text */
+    background-color: #222; /* Dark gray-black background */
+    padding: 20px; /* Adds padding inside the header */
+    border-radius: 5px; /* Rounds the corners slightly */
+    color: #eee; /* Makes text color even lighter for readability */
 }
 
-/* Left Sidebar (Table of Contents) */
+/* ================================= */
+/* 🔹 Left Sidebar (Table of Contents) 🔹 */
+/* ================================= */
 #divleft {
-    grid-column: 1;
-    grid-row: 2;
-    background-color: #222; /* Dark sidebar */
-    padding: 20px;
-    border-radius: 5px;
+    grid-column: 1; /* Places sidebar in the first column */
+    grid-row: 2; /* Places it in the second row */
+    background-color: #222; /* Dark background for the sidebar */
+    padding: 20px; /* Adds space inside the sidebar */
+    border-radius: 5px; /* Rounds the corners slightly */
 }
 
-/* Bottom Section (Button & Cat Image) */
+/* ================================= */
+/* 🔹 Bottom Section (Cat Button & Image) 🔹 */
+/* ================================= */
 #divbottom {
-    grid-column: 2;
-    grid-row: 2;
-    background-color: #222; /* Dark grey-black */
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    grid-column: 2; /* Places this section in the second column */
+    grid-row: 2; /* Places it in the second row */
+    background-color: #222; /* Dark gray-black background */
+    padding: 20px; /* Adds padding for spacing */
+    text-align: center; /* Centers everything inside this section */
+    border-radius: 5px; /* Rounds the corners slightly */
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white glow effect */
 }
 
-/* Headings */
+/* =========================== */
+/* 🔹 Headings (h1, h2, h3) 🔹 */
+/* =========================== */
 h1, h2, h3 {
-    color: red; /* red headings */
+    color: red; /* Makes all headings red */
 }
 
-/* Paragraphs */
+/* ======================== */
+/* 🔹 Paragraph Styling 🔹 */
+/* ======================== */
 p {
-    color: #ddd; /* Light grey paragraphs */
+    color: #ddd; /* Sets paragraph text to light gray */
 }
 
-/* Table of Contents Styling */
+/* ================================= */
+/* 🔹 Table of Contents Styling 🔹 */
+/* ================================= */
 #divleft ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
 }
 
 #divleft ul li {
-    margin: 10px 0;
+    margin: 10px 0; /* Adds space between each list item */
 }
 
 #divleft ul li a {
-    text-decoration: none;
-    color: #ddd; /* Light text for contrast */
-    font-weight: bold;
+    text-decoration: none; /* Removes underline from links */
+    color: #ddd; /* Makes links light gray */
+    font-weight: bold; /* Makes text bold */
 }
 
 #divleft ul li a:hover {
-    color: #ff5555; /* Red hover effect */
+    color: #ff5555; /* Changes link color to red when hovered */
 }
 
-/* Button Appearance */
+/* ===================== */
+/* 🔹 Button Styling 🔹 */
+/* ===================== */
 button {
-    background-color: #ff5555; /* Softer red */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    border-radius: 5px;
+    background-color: #ff5555; /* Softer red button background */
+    color: white; /* Sets button text to white */
+    padding: 10px 20px; /* Adds space inside the button */
+    border: none; /* Removes default button border */
+    cursor: pointer; /* Makes the cursor change to a pointer on hover */
+    font-size: 16px; /* Sets font size */
+    margin-top: 20px; /* Adds space above the button */
+    border-radius: 5px; /* Rounds the button corners */
 }
 
 button:hover {
-    background-color: #cc4444; /* Darker red */
+    background-color: #cc4444; /* Darkens the button when hovered */
 }
 
-/* Hide the Cat Image by Default */
+/* ================================ */
+/* 🔹 Hidden Cat Image (Initially) 🔹 */
+/* ================================ */
 #angryCat {
-    display: none;
-    margin: 20px auto;
-    width: 300px;
-    border-radius: 10px;
+    display: none; /* Hides the image by default */
+    margin: 20px auto; /* Centers the image with space above */
+    width: 300px; /* Sets a fixed width */
+    border-radius: 10px; /* Rounds the corners */
 }
 
-/* Centered Horizontal Lines */
+/* =================================== */
+/* 🔹 Horizontal Line (hr) Styling 🔹 */
+/* =================================== */
 hr {
-    border: none;
-    height: 2px;
-    background-color: red; /* red line */
-    width: 80%;
-    margin: 20px auto; /* Centers the line */
-    display: block;
+    border: none; /* Removes default border */
+    height: 2px; /* Makes the line thicker */
+    background-color: red; /* Makes the line red */
+    width: 80%; /* Limits the width of the line */
+    margin: 20px auto; /* Centers the line on the page */
+    display: block; /* Ensures it acts like a block element */
 }
 
-/* Style for Cookie Images */
+/* ================================ */
+/* 🔹 Cookie Image Styling 🔹 */
+/* ================================ */
 .cookie-img {
-    display: block;
-    margin: 20px auto;
-    width: 200px;
-    border-radius: 10px;
+    display: block; /* Ensures the image is visible */
+    margin: 20px auto; /* Centers the image and adds space around it */
+    width: 200px; /* Sets a fixed width */
+    border-radius: 10px; /* Rounds the corners slightly */
 }
