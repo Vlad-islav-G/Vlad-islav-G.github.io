@@ -141,3 +141,53 @@ hr {
     width: 200px; /* Sets a fixed width */
     border-radius: 10px; /* Rounds the corners slightly */
 }
+
+/* ==================================================== */
+/* 🔸🔸🔸 Project Milestone 2 Additions: Quiz Form Styling 🔸🔸🔸 */
+/* ==================================================== */
+form {
+    background-color: #222; /* Match site theme */
+    padding: 20px; /* Internal spacing */
+    border-radius: 5px; /* Rounded edges */
+    text-align: left; /* Aligns form text left */
+    color: #ddd; /* Text color for contrast */
+    max-width: 600px; /* Form width limit */
+    margin: auto; /* Center the form */
+}
+
+form h3 {
+    color: #ff5555; /* Red for quiz question headers */
+    margin-top: 20px; /* Spacing above questions */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between button and label */
+}
+
+input[type="text"] {
+    padding: 5px; /* Internal input padding */
+    margin-top: 10px; /* Space above input */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+#quiz-result {
+    margin-top: 20px; /* Spacing above results */
+    padding: 15px; /* Padding inside results box */
+    background-color: #333; /* Dark box for results */
+    border-left: 5px solid red; /* Accent left border */
+    border-radius: 5px; /* Rounded edges */
+    color: #fff; /* White text for contrast */
+}
+
+button[type="submit"],
+button[type="button"] {
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Highlight the quiz link in sidebar */
+#divleft ul li a[href="quiz.html"] {
+    color: #ffcc00; /* Yellow to make quiz link stand out */
+}
+
