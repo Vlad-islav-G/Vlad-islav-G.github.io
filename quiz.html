@@ -13,7 +13,7 @@
         /* =============================== */
         /* 🔹 Milestone 2: Quiz Specific Styles */
         /* =============================== */
-        .quiz-container {
+        #divright {
             max-width: 800px;
             margin: 40px auto;
             background-color: #222;
@@ -22,12 +22,12 @@
             box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.1);
         }
 
-        .quiz-container h1 {
+        #divright h1 {
             color: red;
             text-align: center;
         }
 
-        .quiz-container label {
+        #divright label {
             display: block;
             margin: 8px 0;
         }
@@ -51,38 +51,38 @@
     </style>
 
     <script>
-        // Function to check all quiz answers
+        // 🔹 JavaScript logic to check answers and display results
         function checkQuiz() {
             let score = 0;
 
-            // Question 1: Correct answer is "To remember login info and preferences"
+            // Question 1: Single-choice radio
             if (document.getElementById("q1b").checked) score++;
 
-            // Question 2: Correct answer is "Session cookie"
+            // Question 2: Single-choice radio
             if (document.getElementById("q2c").checked) score++;
 
-            // Question 3: Correct answer is "HTTPS"
+            // Question 3: Single-choice radio
             if (document.getElementById("q3a").checked) score++;
 
-            // Question 4: Check text input for "session cookies" (case-insensitive)
+            // Question 4: Fill in the blank - case insensitive
             let answer4 = document.getElementById("q4").value.trim().toLowerCase();
             if (answer4 === "session cookies" || answer4 === "session cookie") score++;
 
-            // Question 5: Check checkboxes - must check a & b, not c
+            // Question 5: Multiple correct answers with checkboxes
             let q5a = document.getElementById("q5a").checked;
             let q5b = document.getElementById("q5b").checked;
             let q5c = document.getElementById("q5c").checked;
             if (q5a && q5b && !q5c) score++;
 
-            // Show score
+            // Show result score and feedback
             document.getElementById("result").innerHTML = `You scored ${score}/5`;
 
-            // Show result image and message based on score
             const resultDiv = document.getElementById("quizResultImage");
             const resultImg = document.getElementById("resultImage");
             const resultText = document.getElementById("resultText");
             resultDiv.style.display = "block";
 
+            // Show image/text depending on score
             if (score <= 3) {
                 resultImg.src = "https://media1.tenor.com/m/ZyqhFIPi2OgAAAAC/cat-crying-cat.gif";
                 resultText.innerText = "YOU FAILED - TRY AGAIN";
@@ -95,7 +95,7 @@
             }
         }
 
-        // Function to reset quiz and hide results
+        // 🔹 Resets quiz and hides result section
         function resetQuiz() {
             document.getElementById("quizForm").reset();
             document.getElementById("result").innerHTML = "";
@@ -105,51 +105,81 @@
 </head>
 
 <body>
-<div class="quiz-container">
-    <h1>🍪 Cookie Knowledge Quiz</h1>
-    <form id="quizForm">
+<div class="grid-container">
 
-        <!-- Question 1: Single Choice -->
-        <h3>1. What are cookies primarily used for?</h3>
-        <label><input type="radio" name="q1" id="q1a"> To clean your browser history</label>
-        <label><input type="radio" name="q1" id="q1b"> To remember login info and preferences</label>
-        <label><input type="radio" name="q1" id="q1c"> To increase internet speed</label>
+    <!-- Sidebar navigation (HTML part) -->
+    <div id="divleft">
+        <h2>Table of Contents</h2>
 
-        <!-- Question 2: Single Choice -->
-        <h3>2. What kind of cookie disappears after closing the browser?</h3>
-        <label><input type="radio" name="q2" id="q2a"> Persistent cookie</label>
-        <label><input type="radio" name="q2" id="q2b"> Third-party cookie</label>
-        <label><input type="radio" name="q2" id="q2c"> Session cookie</label>
+        <h3>Main:</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
 
-        <!-- Question 3: Single Choice -->
-        <h3>3. What protocol should be used to send secure cookies?</h3>
-        <label><input type="radio" name="q3" id="q3a"> HTTPS</label>
-        <label><input type="radio" name="q3" id="q3b"> FTP</label>
-        <label><input type="radio" name="q3" id="q3c"> HTTP</label>
+        <h3>Project Milestone 1:</h3>
+        <ul>
+            <li><a href="cookie_basics.html">Cookie Basics</a></li>
+            <li><a href="cookie_security.html">Cookie Security</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
 
-        <!-- Question 4: Fill in the blank -->
-        <h3>4. Fill in the blank: ___________ are temporary cookies that are deleted when you close your browser.</h3>
-        <input type="text" id="q4" placeholder="Your answer here..." style="width: 100%; padding: 5px;">
-
-        <!-- Question 5: Multiple Answer (Checkbox) -->
-        <h3>5. Which of the following are good practices for cookie security? (Select all that apply)</h3>
-        <label><input type="checkbox" id="q5a"> Use HttpOnly flag</label>
-        <label><input type="checkbox" id="q5b"> Use Secure attribute (HTTPS only)</label>
-        <label><input type="checkbox" id="q5c"> Store passwords in cookies</label>
-
-        <br><br>
-        <button type="button" onclick="checkQuiz()">Submit Quiz</button>
-        <button type="button" onclick="resetQuiz()">Restart Quiz</button>
-    </form>
-
-    <!-- Display Score -->
-    <div id="result" style="margin-top: 20px;"></div>
-
-    <!-- Feedback Section: Image and Text -->
-    <div id="quizResultImage">
-        <img id="resultImage" src="" alt="Result Image">
-        <p id="resultText"></p>
+        <h3>Project Milestone 2:</h3>
+        <ul>
+            <li><a href="quiz.html">Cookies Quiz</a></li>
+        </ul>
     </div>
+
+    <!-- Main content and quiz (HTML, CSS and JS combined) -->
+    <div id="divright">
+        <h1>🍪 Cookie Knowledge Quiz 🍪</h1>
+
+        <!-- HTML form for interactive quiz -->
+        <form id="quizForm">
+
+            <!-- Question 1: HTML radio input -->
+            <h3>1. What are cookies primarily used for?</h3>
+            <label><input type="radio" name="q1" id="q1a"> To clean your browser history</label>
+            <label><input type="radio" name="q1" id="q1b"> To remember login info and preferences</label>
+            <label><input type="radio" name="q1" id="q1c"> To increase internet speed</label>
+
+            <!-- Question 2 -->
+            <h3>2. What kind of cookie disappears after closing the browser?</h3>
+            <label><input type="radio" name="q2" id="q2a"> Persistent cookie</label>
+            <label><input type="radio" name="q2" id="q2b"> Third-party cookie</label>
+            <label><input type="radio" name="q2" id="q2c"> Session cookie</label>
+
+            <!-- Question 3 -->
+            <h3>3. What protocol should be used to send secure cookies?</h3>
+            <label><input type="radio" name="q3" id="q3a"> HTTPS</label>
+            <label><input type="radio" name="q3" id="q3b"> FTP</label>
+            <label><input type="radio" name="q3" id="q3c"> HTTP</label>
+
+            <!-- Question 4: text input field -->
+            <h3>4. Fill in the blank: ___________ are temporary cookies that are deleted when you close your browser.</h3>
+            <input type="text" id="q4" placeholder="Your answer here..." style="width: 100%; padding: 5px;">
+
+            <!-- Question 5: multiple correct checkboxes -->
+            <h3>5. Which of the following are good practices for cookie security? (Select all that apply)</h3>
+            <label><input type="checkbox" id="q5a"> Use HttpOnly flag</label>
+            <label><input type="checkbox" id="q5b"> Use Secure attribute (HTTPS only)</label>
+            <label><input type="checkbox" id="q5c"> Store passwords in cookies</label>
+
+            <br><br>
+            <!-- Submit and reset buttons -->
+            <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+            <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+        </form>
+
+        <!-- Output result score -->
+        <div id="result" style="margin-top: 20px;"></div>
+
+        <!-- Image and text based on result -->
+        <div id="quizResultImage">
+            <img id="resultImage" src="" alt="Result Image">
+            <p id="resultText"></p>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
