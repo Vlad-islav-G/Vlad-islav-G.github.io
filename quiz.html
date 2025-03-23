@@ -11,7 +11,7 @@
 
     <style>
         /* =============================== */
-        /* 🔹 Milestone 2: Quiz Specific Styles */
+        /* 🔹🔹🔹 Milestone 2 Styles 🔹🔹🔹 */
         /* =============================== */
         #divright {
             background-color: #222;
@@ -88,7 +88,9 @@
             document.getElementById("result").innerHTML = "";
             document.getElementById("quizResultImage").style.display = "none";
         }
+        
     </script>
+    
 </head>
 
 <body>
@@ -119,8 +121,9 @@
         </ul>
     </div>
 
-    <!-- Quiz content -->
+    <!-- 🔹🔹🔹Quiz content🔹🔹🔹 -->
     <div id="divright">
+        
         <form id="quizForm">
 
             <h3>1. What are cookies primarily used for?</h3>
@@ -147,8 +150,10 @@
             <label><input type="checkbox" id="q5c"> Store passwords in cookies</label>
 
             <br><br>
+            
             <button type="button" onclick="checkQuiz()">Submit Quiz</button>
             <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+            
         </form>
 
         <div id="result" style="margin-top: 20px;"></div>
@@ -156,6 +161,7 @@
         <div id="quizResultImage">
             <img id="resultImage" src="" alt="Result Image">
             <p id="resultText"></p>
+            
         </div>
     </div>
 </div>
