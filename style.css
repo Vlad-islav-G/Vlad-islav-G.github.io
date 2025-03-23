@@ -92,6 +92,14 @@ p {
     color: #ff5555; /* Changes link color to red when hovered */
 }
 
+/* ============================== */
+/* 🔹 Style for Milestone Labels 🔹 */
+/* ============================== */
+#divleft h3 {
+    color: red; /* Makes "Project Milestone 1/2" labels red */
+    margin-top: 20px;
+}
+
 /* ===================== */
 /* 🔹 Button Styling 🔹 */
 /* ===================== */
