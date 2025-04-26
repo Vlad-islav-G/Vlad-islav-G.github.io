@@ -50,47 +50,89 @@
     </style>
 
     <script>
-        function checkQuiz() {
-            let score = 0;
 
-            if (document.getElementById("q1b").checked) score++;
-            if (document.getElementById("q2c").checked) score++;
-            if (document.getElementById("q3a").checked) score++;
+    /* 🔹🔹🔹 Milestone 3 correction based on Assignment 2 remarks 🔹🔹🔹
+       Per the feedback, I updated the quiz to not only show 
+       the total score but also display the correct answer for each 
+       question after submission. This improves user feedback and 
+       meets the milestone requirements.
+    */
 
-            let answer4 = document.getElementById("q4").value.trim().toLowerCase();
-            if (answer4 === "session cookies" || answer4 === "session cookie") score++;
+    function checkQuiz() {
+        let score = 0;
+        let feedback = "";
 
-            let q5a = document.getElementById("q5a").checked;
-            let q5b = document.getElementById("q5b").checked;
-            let q5c = document.getElementById("q5c").checked;
-            if (q5a && q5b && !q5c) score++;
-
-            document.getElementById("result").innerHTML = `You scored ${score}/5`;
-
-            const resultDiv = document.getElementById("quizResultImage");
-            const resultImg = document.getElementById("resultImage");
-            const resultText = document.getElementById("resultText");
-            resultDiv.style.display = "block";
-
-            if (score <= 3) {
-                resultImg.src = "https://media1.tenor.com/m/ZyqhFIPi2OgAAAAC/cat-crying-cat.gif";
-                resultText.innerText = "YOU FAILED - TRY AGAIN";
-            } else if (score === 4) {
-                resultImg.src = "https://media1.tenor.com/m/sW9GOo6TshcAAAAC/evil-larry.gif";
-                resultText.innerText = "YOU CAN DO BETTER - TRY AGAIN";
-            } else {
-                resultImg.src = "https://media1.tenor.com/m/9ROEdY7v0UkAAAAC/yay-kitty.gif";
-                resultText.innerText = "YOU PASSED!!!";
-            }
+        // Question 1
+        if (document.getElementById("q1b").checked) {
+            score++;
+            feedback += "<p>Q1 Correct Answer: To remember login info and preferences ✅</p>";
+        } else {
+            feedback += "<p>Q1 Correct Answer: To remember login info and preferences ❌</p>";
         }
 
-        function resetQuiz() {
-            document.getElementById("quizForm").reset();
-            document.getElementById("result").innerHTML = "";
-            document.getElementById("quizResultImage").style.display = "none";
+        // Question 2
+        if (document.getElementById("q2c").checked) {
+            score++;
+            feedback += "<p>Q2 Correct Answer: Session cookie ✅</p>";
+        } else {
+            feedback += "<p>Q2 Correct Answer: Session cookie ❌</p>";
         }
-        
-    </script>
+
+        // Question 3
+        if (document.getElementById("q3a").checked) {
+            score++;
+            feedback += "<p>Q3 Correct Answer: HTTPS ✅</p>";
+        } else {
+            feedback += "<p>Q3 Correct Answer: HTTPS ❌</p>";
+        }
+
+        // Question 4
+        let answer4 = document.getElementById("q4").value.trim().toLowerCase();
+        if (answer4 === "session cookies" || answer4 === "session cookie") {
+            score++;
+            feedback += "<p>Q4 Correct Answer: Session cookies ✅</p>";
+        } else {
+            feedback += "<p>Q4 Correct Answer: Session cookies ❌</p>";
+        }
+
+        // Question 5
+        let q5a = document.getElementById("q5a").checked;
+        let q5b = document.getElementById("q5b").checked;
+        let q5c = document.getElementById("q5c").checked;
+        if (q5a && q5b && !q5c) {
+            score++;
+            feedback += "<p>Q5 Correct Answer: Use HttpOnly and Secure attribute ✅</p>";
+        } else {
+            feedback += "<p>Q5 Correct Answer: Use HttpOnly and Secure attribute ❌</p>";
+        }
+
+        // Show score and feedback
+        document.getElementById("result").innerHTML = `You scored ${score}/5` + feedback;
+
+        // Show result image and message
+        const resultDiv = document.getElementById("quizResultImage");
+        const resultImg = document.getElementById("resultImage");
+        const resultText = document.getElementById("resultText");
+        resultDiv.style.display = "block";
+
+        if (score <= 3) {
+            resultImg.src = "https://media1.tenor.com/m/ZyqhFIPi2OgAAAAC/cat-crying-cat.gif";
+            resultText.innerText = "YOU FAILED - TRY AGAIN";
+        } else if (score === 4) {
+            resultImg.src = "https://media1.tenor.com/m/sW9GOo6TshcAAAAC/evil-larry.gif";
+            resultText.innerText = "YOU CAN DO BETTER - TRY AGAIN";
+        } else {
+            resultImg.src = "https://media1.tenor.com/m/9ROEdY7v0UkAAAAC/yay-kitty.gif";
+            resultText.innerText = "YOU PASSED!!!";
+        }
+    }
+
+    function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("quizResultImage").style.display = "none";
+    }
+</script>
     
 </head>
 
